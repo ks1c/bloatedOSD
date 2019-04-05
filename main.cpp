@@ -1,15 +1,16 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include "dbushandler.hpp"
+#include "notificationmanager.hpp"
 
 int main(int argc, char *argv[]) {
 	
 	QCoreApplication app(argc, argv);
-	qDebug() << "helloWorld";
+	qDebug() << "Service started.\n";
+	
+	NotificationManager notificationManager;	
+	DBusHandler dBusHandler(&notificationManager);
 
-	DBusHandler dBusHandler;
-
-	return 0;
-	//return app.exec();
+	return app.exec();
 }
 
