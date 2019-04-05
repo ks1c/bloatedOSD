@@ -1,2 +1,9 @@
 Makefile
 bloatedOSD.pro
+.qmake.stash
+bloatedOSD
+dbushandler.o
+main.o
+moc_dbushandler.cpp
+moc_dbushandler.o
+moc_predefs.h
